@@ -26,22 +26,22 @@ Configure the root of your repository with the following files and directories. 
 * **\_\_test\_\_/** - contains unit tests
 
 ## Testing
-##### File Reader Module Tests
+##### File read Module Tests
 * Use `describe` and `it` (or `test`) methods to define descriptive tests and increase readability
 * Each `it` callback should aim to test a small, well defined, feature of a function
-* Write tests to ensure that the reader function rejects errors with invalid file paths
-* Write tests to ensure that the reader function correctly resolves mapped string data for an array of file paths
+* Write tests to ensure that the read function rejects errors with invalid file paths
+* Write tests to ensure that the read function correctly resolves mapped string data for an array of file paths
 
 ## Feature Tasks
-##### File Reader Module
-In the lib/ directory create a `reader.js` module that exports a single function. The reader module should take an array of three file paths and resolve a mapped array of strings loaded from each file using an error-first callback. The string data should be in the same order as the file path data (mapped). If an error occurs, it should immediately reject the error using the callback and stop execution.
+##### File read Module
+In the lib/ directory create a `read.js` module that exports a single function. The read module should take an array of three file paths and resolve a mapped array of strings loaded from each file using an error-first callback. The string data should be in the same order as the file path data (mapped). If an error occurs, it should immediately reject the error using the callback and stop execution.
 
-* The file reader module should have the function signature `(paths, callback) => undefined`
-* On failure, the file reader module should invoke the callback with an error `callback(error)`
-* On success, the file reader module should invoke the callback with `null` as the first parameter and the result as the second parameter - `callback(null, result)`
+* The file read module should have the function signature `(paths, callback) => undefined`
+* On failure, the file read module should invoke the callback with an error `callback(error)`
+* On success, the file read module should invoke the callback with `null` as the first parameter and the result as the second parameter - `callback(null, result)`
 
 ##### Stretch
-Write the file reader function recursively so that it will be able to support 0 or more paths.
+Write the file read function recursively so that it will be able to support 0 or more paths.
 
 ##  Documentation
 In your README.md describe the exported values of each module you have defined. Every function description should include it's airty (expected number of parameters), the expected data for each paramiter (data-type and limitations), and it's behavior (for both valid and invalued use). Feel free to write any additional information in your README.md.
