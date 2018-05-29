@@ -6,7 +6,7 @@ describe('The Reader Module', () => {
 
     it(' should return error when given an improper file name', (done) => {
 
-        let fp = ['bad.txt'];
+        let fp = ['errWrongSorryGoThatWay.txt'];
 
         read(fp, (err) => {
 
